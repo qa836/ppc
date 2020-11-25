@@ -1,0 +1,30 @@
+dist: focal
+arch: ppc64le
+# virt: lxd
+# language: minimal
+
+service:
+- docker
+
+script:
+- uname -a
+# - sudo dpkg -l | grep docker
+- sudo cat /etc/cloud/cloud.cfg
+- sudo cat /etc/hosts
+- sudo cat /etc/docker/daemon.json
+# - sudo rm /etc/docker/daemon.json -f
+# - sleep 10
+
+# - sudo rm -f /etc/docker/daemon.json
+# - sudo systemctl restart docker.service
+- docker ps
+- docker run hello-world
+- docker info
+# - sudo apt install tmate -y
+
+jobs:
+  - dist: xenial
+#     group: edge
+  - dist: bionic
+    group: stable
+  - dist: focal
