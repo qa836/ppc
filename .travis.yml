@@ -1,16 +1,16 @@
 dist: focal
-# arch: ppc64le
-arch: amd64
-virt: lxd
+arch: ppc64le
+# arch: amd64
+# virt: lxd
 # language: miminaml
-group: dev
+# group: dev
 
 service:
 - docker
 
 script:
 - uname -a
-- sudo dpkg -l | grep ibm
+- sudo dpkg -l | grep ibm | grep tool
 - sudo cat /etc/cloud/cloud.cfg
 - sudo cat /etc/hosts
 - sudo cat /etc/docker/daemon.json
