@@ -1,7 +1,7 @@
 dist: focal
 arch: ppc64le
 # virt: lxd
-language: minimal
+language: generic
 
 service:
 - docker
