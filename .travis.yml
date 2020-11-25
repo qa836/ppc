@@ -2,7 +2,8 @@ dist: focal
 # arch: ppc64le
 arch: amd64
 virt: lxd
-language: miminaml
+# language: miminaml
+group: dev
 
 service:
 - docker
