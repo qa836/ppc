@@ -4,7 +4,7 @@ arch:
 - amd64
 virt: lxd
 # language: miminaml
-# group: dev
+group: dev
 
 # service:
 # - docker
