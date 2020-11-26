@@ -5,12 +5,12 @@ arch: ppc64le
 # language: miminaml
 # group: dev
 
-service:
-- docker
+# service:
+# - docker
 
 script:
 - uname -a
-- sudo dpkg -l | grep ibm
+- sudo dpkg -l | grep toolchain
 - sudo cat /etc/cloud/cloud.cfg
 - sudo cat /etc/hosts
 - sudo cat /etc/docker/daemon.json
