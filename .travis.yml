@@ -10,7 +10,7 @@ service:
 
 script:
 - uname -a
-- sudo dpkg -l | grep ibm | grep tool
+- sudo dpkg -l | grep ibm
 - sudo cat /etc/cloud/cloud.cfg
 - sudo cat /etc/hosts
 - sudo cat /etc/docker/daemon.json
